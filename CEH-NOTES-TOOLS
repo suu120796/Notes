@@ -1,0 +1,20 @@
+CEH-NOTES-TOOLS
+
+FOOTPRİNTİNG & RECONNİSE
+
+Google Dork
+cache>>    cache:www.eccongil.org  >> önbelleğe alınmıs sürümü görürsün 
+allinurl>>  sorgu terimlerini filtreler >>  allinurl:eccoungil.org
+inurl>>  kelime filtresi >>  inurl: copy site:www.eccouncil.org
+allintitle >>başlıkta belirtilen tüm sorgu terimlerini içeren sayfalarla sınırlar >> allintitle: detect malware
+inanchor >> sayfaya giden bağlantılardaki bağlantı metninde belirtilen sorgu terimlerini içeren sayfalarla sınırlar >> Anti-virus 
+CEH inanchor:Education   kelime ceh olarak filtreler inanchor:Norton  education kelimelesi içeren sayfaları filtreler
+allinanchor >>sayfaya giden bağlantılardaki bağlantı metninde belirtilen tüm sorgu terimlerini içeren sayfalarla sınırlar
+>>allinanchor: best cloud service provider      3 kelimeninde bulundugu sayfaları döndürür
+link >> belirtilen web sitesine veya sayfaya bağlantılar içeren web sitelerini veya sayfaları arar >>  link:www.eccouncil.org]
+
+
+
+
+
+

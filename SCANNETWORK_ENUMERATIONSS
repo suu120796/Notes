@@ -1,0 +1,72 @@
+Port Tarama : Açık portları ve hizmetleri listeler
+Ağ Taraması : Etkin ana bilgisayarları ve IP adreslerini listeler
+Güvenlik Açığı Taraması : Bilinen zayıflıkların varlığını gösterir
+
+nmap -sn -PR [Hedef IP Adresi]    ping request arp tabanlı         E:echo ıcmp tabnalıı
+ nmap --script smb-os-discovery.nse [Hedef IP Adresi]
+
+SCAN PAREMETRSS
+
+-s=scan  -p=ping  -A=agggresivve  -o=os -v=verbose(ayrıntı)  -n=no dns resolutions
+-S=SYN -M=Mask -A=ACK  -T=TCP -F=FIN -P=PING -E=ECHO -R=REQUEST  -X:Gizli Firewall Kaçış
+A=ACK T=TCP U=UDP F=FIN
+-PR=Ping Request  ARP
+-PE=Ping Echo ICMP
+-PP=Ping Packet ICMP timestampt
+-PM=Ping Mask 
+-PS=Ping SYN
+-PA=Ping ACK 
+-PU=Ping UDP
+-sn =no scan port   
+
+
+Host Discovery (Ping Sweep) → canlı sistemleri bul
+nmap -sn 10.10.1.0/24
+
+nmap -sS -sV 10.10.1.0/24
+
+nmap -A 10.10.1.*  host tespitiii
+
+Genel sistem için tarma: 
+nmap -PR x.x.1.0/24  açık port ve hizmetleri tespit ett
+
+
+
+SCANNONG NETWORKS 
+
+NETBIOS network basic input output system   137-138-139
+terminal windows> nbtstat -c    //     nbtstat -a ip   // net use 
+
+SNMP ENUM   Simple network management system   161 -162 
+snmpwalk -v2c -c  hedefip      -c:topluluk dizesi ayarlar
+
+LDAP (Lightweight Directory Access Protocol)
+Hafif Dizin Erişim Protokolü
+
+DNS domain name service      parrot> dig     windows>>  nslookup 
+dig ns [Hedef Alan Adı]
+ns:name server ad sunuculaırnı döndürür
+dig @nameserver targetdomain axfr   
+
+nsllokup for windows 
+nslookup // set query type=soa 
+domain yaz hedef      buarada primary server ve mail çıkabilir 
+ ls -d [Ad Sunucusu]   >  ls -d belirtilen isim sunucusunun bölge transferini ister. axfr  
+ SOA: Start Of Authority - Yetki başlangıcı 
+ 
+ SMTP Sayımı >>   25 2525 587  POP3 IMAP SMTP 
+ 
+ MX sunucuları kullanılır
+ nmap -p 25 --script=smtp-enum-users [Hedef IP Adresi]   olası posta kullanıcılarıın listesini verir
+  nmap -p 25 --script=smtp-open-relay [Hedef IP Adresi]  olası açık röleleri listeler
+ 
+ Farklı tools:    gLOBAL nETWORK ıNVENTORY 
+ 
+ 
+ 
+
+
+
+
+
+

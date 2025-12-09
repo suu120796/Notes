@@ -1,0 +1,14 @@
+Vulnerability Analysis
+
+CWE 
+https://cwe.mitre.org 
+access content 
+SWE-list
+
+OpenVAS 
+docker run -d -p 443:443 --name openvas mikesplain/openvas
+https://127.0.0.1/   
+admin / admin
+Scans --> Tasks > task wizard > hedefip yaz 
+reports:results
+Vulnerability

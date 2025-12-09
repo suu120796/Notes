@@ -1,0 +1,78 @@
+CEH-NOTES-TOOLS
+
+FOOTPRİNTİNG & RECONNİSE
+
+1)Google Dork
+
+cache>>    cache:www.eccongil.org  >> önbelleğe alınmıs sürümü görürsün 
+allinurl>>  sorgu terimlerini filtreler >>  allinurl:eccoungil.org
+inurl>>  kelime filtresi >>  inurl: copy site:www.eccouncil.org
+allintitle >>başlıkta belirtilen tüm sorgu terimlerini içeren sayfalarla sınırlar >> allintitle: detect malware
+inanchor >> sayfaya giden bağlantılardaki bağlantı metninde belirtilen sorgu terimlerini içeren sayfalarla sınırlar >> Anti-virus 
+CEH inanchor:Education   kelime ceh olarak filtreler inanchor:Norton  education kelimelesi içeren sayfaları filtreler
+allinanchor >>sayfaya giden bağlantılardaki bağlantı metninde belirtilen tüm sorgu terimlerini içeren sayfalarla sınırlar
+>>allinanchor: best cloud service provider      3 kelimeninde bulundugu sayfaları döndürür
+link >> belirtilen web sitesine veya sayfaya bağlantılar içeren web sitelerini veya sayfaları arar >>  link:www.eccouncil.org]
+related >>URL'ye benzer veya ilgili web sitelerini görüntüler.   >>   related:www.eccouncil.org
+info >>  belirtilen web sayfası hakkında bilgi bulur >> info:eccouncil.org
+location >> Bu operatör belirli bir konum için bilgi bulur >> location: EC-Council]
+
+2)INTERNET RESEARCH 
+ Netcraft
+
+https://sitereport.netcraft.com/  >>>   search type:  https://targeturl
+. Altyapı, kullanılan teknoloji, alt alan adları, arka plan, ağ vb. gibi kurumsal web sitesiyle ilgili bilgileri çıkarmak için
+ Background, Network, Hosting History, bilgilerini verir 
+
+DNSdumpster 
+ https://dnsdumpster.com/
+ search type:  certifiedhacker.com
+ Ana Bilgisayar Konumlarının GEOIP'ini,DNS Sunucuları , MX Kayıtları , Ana Bilgisayar Kaydı (A) ve IP adreslerinin listesini alan adı haritasını  verir.
+Coğrafi Konum IP Adresi Veritabanı (Geographic Location IP Address Database)  GEOIP
+
+3)Social Networking Sites 
+
+SHERLOCK
+Sherlock, çeşitli sosyal ağ siteleri üzerinden hedef kişi hakkında bilgi toplamak için kullanılan Python tabanlı bir araçtır
+>sherlock "search  term"
+
+
+4)Whois Footprinting
+ https://whois.domaintools.com
+DomainTools  >> hedef alan adı hakkında sahip, kayıt kuruluşu, kayıt bilgileri, ad sunucusu, iletişim bilgileri vb. bilgiler sağlar.kayıt bilgileri, isim sunucuları, IP adresi, konum vb. gibi organizasyonel ayrıntıları içeren
+DomainTools kullanarak Whois araması   
+
+5)Perform DNS Footprinting
+nslookup >>  komut satırı yardımcı programıdır  windows
+nslookup yaz windows terminal aractasın    
+set type=ad sonra www.......
+set type=cname    sonra certifiedhacker.com
+Yetkili isim sunucusunu elde ettiğinize göre, isim sunucusunun IP adresini belirlemeniz gerekecektir.
+set type=a ya geç 
+
+çevrimiçi toolu da var http://www.kloth.net/services/nslookup.php
+cnmae=cabonical name 
+DNS'te (Alan Adı Sistemi) bir alan adını başka bir alan adına yönlendiren bir kayıt türüdür.
+set a e 'A Kaydı' (Address Record)
+
+6)FOTPRINTING OLCUMU
+Hedef kuruluşun ağ aralığı, traceroute, TTL değerleri vb. gibi ağ ile ilgili bilgilerini toplamak için ağ ayak izi çıkarmaktır
+winodws için;    tracert
+tracert www.......    -h atlama syaısı   ex: -h 5 
+
+parrot: traceroute  WWW.HFHFDFJ
+
+7) E-posta Ayak İzi Oluşturma
+eMailTrackerPro
+
+8)TOOLS >>>  recon-ng
+parrt >recon-ng   //    marketplace install all //modules search//workspaces//workspace cerate CEH   ex://workspaces lists//
+db insert domains//domain txt >  certifiedhacker.com//show domains
+ Alanla ilişkili kişileri ayıklayan ve görüntüleyen Recon-ng modül : recon/domains-contacts/whois_pocs
+
+ 
+ 
+ 
+ 
+
+
